@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="brand">
+            <span class="dot"></span>
+            The Interview Hub
+        </div>
+
+        <div class="oncounter" id="clock"></div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="studio">
+
+        <!-- Sidebar -->
+        <nav class="rail">
+
+            <div class="rail-label">
+                Question Reel
+            </div>
+
+            <button class="channel active" data-cat="behavioral">
+                Behavioral
+                <span class="count">8</span>
+            </button>
+
+            <button class="channel" data-cat="technical">
+                Technical
+                <span class="count">8</span>
+            </button>
+
+            <button class="channel" data-cat="general">
+                General &amp; Fit
+                <span class="count">8</span>
+            </button>
+
+            <div class="rail-foot">
+                <p>
+                    Pick a reel, hit
+                    <strong style="color:var(--amber-dim)">Record</strong>,
+                    and answer out loud as if the panel is listening.
+                    No footage is kept — this is just your rehearsal space.
+                </p>
+            </div>
+
+        </nav>
+
+        <!-- Main Stage -->
+        <main class="stage">
+
+            <!-- Recording Status -->
+            <div class="rec-row">
+                <div class="rec-light" id="recLight"></div>
+
+                <div class="rec-text" id="recText">
+                    STANDING BY
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="card-wrap">
+
+                <div class="cue-card" id="cueCard">
+
+                    <div class="card-eyebrow" id="cardEyebrow">
+                        BEHAVIORAL — CARD 1 OF 8
+                    </div>
+
+                    <p class="card-question" id="cardQuestion">
+                        Tell me about a time you disagreed with a teammate.
+                        How did you handle it?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Timer -->
+            <div class="timer-block">
+                <div class="timer-display" id="timerDisplay">
+                    00:00
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="btn-row">
+
+                <button class="btn btn-rec" id="recBtn">
+                    Record answer
+                </button>
+
+                <button class="btn" id="resetTimerBtn">
+                    Reset clock
+                </button>
+
+                <button class="btn btn-primary" id="nextBtn">
+                    Next question →
+                </button>
+
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-row">
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="progress-label" id="progressLabel">
+                    1 / 8 rehearsed
+                </div>
+
+            </div>
+
+            <!-- Hint -->
+            <p class="hint">
+                Aim for <strong>60–90 seconds</strong> on behavioral and fit
+                questions, a little longer if you're walking through technical
+                reasoning. The clock is just a guide, not a buzzer.
+            </p>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
